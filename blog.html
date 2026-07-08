@@ -9,77 +9,100 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config','G-3ZFXQQ7QX0');
 </script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Outdoor Blog | Jason Dickson's Outdoor Adventures</title>
+<meta name="description" content="Duck hunting stories, fishing adventures, wild game recipes, and outdoor lessons from Jason Dickson's Outdoor Adventures.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <a href="index.html">
-    <img src="images/logo.png" alt="Jason Dickson's Outdoor Adventures" class="logo">
-  </a>
+  <a href="index.html"><img src="images/logo.png" alt="Jason Dickson's Outdoor Adventures" class="logo"></a>
   <nav>
     <a href="index.html">Home</a>
     <a href="books.html">Books</a>
-    <a href="blog.html">Blog</a>
+    <a class="active" href="blog.html">Blog</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<section class="hero small">
+<section class="hero small blog-hero">
   <div class="hero-content">
-    <h2>Outdoor Blog</h2>
-    <p>Hunting adventures, fishing trips, wild game cooking, and lessons learned in the outdoors.</p>
+    <h2>Outdoor Journal</h2>
+    <p>Hunting stories, fishing trips, wild game recipes, and lessons learned outdoors.</p>
   </div>
 </section>
 
 <main>
-  <h1 class="page-title">Latest Stories</h1>
-  <p class="intro">Real hunts, field memories, recipes, fishing trips, and outdoor experiences from Jason Dickson's Outdoor Adventures.</p>
+  <h1 class="page-title">Latest from the Field</h1>
+  <p class="intro">Stories from the blind, recipes from the kitchen, fishing memories, and practical outdoor knowledge from Jason Dickson's Outdoor Adventures.</p>
 
-  <section class="posts">
-    <div class="story-card">
+  <section class="featured-story">
+    <img src="images/blog/frostedhunt1.JPG" alt="Duck hunting on a cold lake morning">
+    <div class="featured-story-content">
+      <div class="tag">Featured Duck Hunting Story</div>
+      <h2>The Strangest Hunt of All Time</h2>
+      <p>I've had shotguns jam. I've had shells misfire. But I'd never seen an entire shotgun barrel fly into the lake.</p>
+      <a class="button" href="strangest-hunt.html">Read Featured Story →</a>
+    </div>
+  </section>
+
+  <section class="category-strip" aria-label="Featured links">
+    <a href="strangest-hunt.html">🦆 Duck Hunting Story</a>
+    <a href="tuna-trip.html">🎣 Fishing Story</a>
+    <a href="striped-bass-tomato-basil.html">🍳 Fish Recipe</a>
+    <a href="gallery.html">📸 Photo Gallery</a>
+    <a href="books.html">📚 Books</a>
+  </section>
+
+  <h2 class="section-title">All Posts</h2>
+  <section class="magazine-grid">
+    <article id="duck-hunting" class="mag-card large-card">
+      <img src="images/blog/frostedhunt1.JPG" alt="The Strangest Hunt of All Time">
+      <div class="mag-card-content">
+        <div class="date">🦆 Duck Hunting Story</div>
+        <h2>The Strangest Hunt of All Time</h2>
+        <p>A cold December lake hunt, working jerk lines, gadwalls overhead, and one unbelievable shotgun malfunction.</p>
+        <a class="button" href="strangest-hunt.html">Read Story →</a>
+      </div>
+    </article>
+
+    <article id="recipes" class="mag-card">
       <img src="images/blog/striped-bass-tomato-basil.jpg" alt="Striped Bass with Tomato and Basil Sauce">
-      <div class="story-content">
+      <div class="mag-card-content">
         <div class="date">🍽️ Wild Fish Recipe</div>
         <h2>Striped Bass with Tomato and Basil Sauce</h2>
-        <p>A light, fresh striped bass recipe with tomatoes, basil, garlic, and lemon that keeps the fish tender and flavorful.</p>
+        <p>A light, fresh striped bass recipe with tomatoes, basil, garlic, and lemon.</p>
         <a class="button" href="striped-bass-tomato-basil.html">Read Recipe →</a>
       </div>
-    </div>
+    </article>
 
-    <div class="story-card">
+    <article class="mag-card">
       <img src="images/blog/frostedhunt1.JPG" alt="The Frosted Hunt">
-      <div class="story-content">
+      <div class="mag-card-content">
         <div class="date">📅 January Duck Hunt</div>
         <h2>The Frosted Hunt</h2>
         <p>A cold January morning, frozen water, teal, bluebills, geese, mallards, and memories from the blind.</p>
         <a class="button" href="frosted-hunt.html">Read Story →</a>
       </div>
-    </div>
+    </article>
 
-    <div class="story-card">
+    <article id="fishing" class="mag-card">
       <img src="images/blog/tuna1.jpg" alt="Chasing Yellowfin in Venice">
-      <div class="story-content">
-        <div class="date">🎣 Yellowfin Tuna Fishing Trip</div>
+      <div class="mag-card-content">
+        <div class="date">🎣 Offshore Fishing Trip</div>
         <h2>Chasing Yellowfin in Venice</h2>
-        <p>A Louisiana offshore fishing trip to remember with good friends, deep-water rigs, and hard-fighting yellowfin tuna.</p>
+        <p>A Louisiana offshore fishing trip with good friends, deep-water rigs, and hard-fighting yellowfin tuna.</p>
         <a class="button" href="tuna-trip.html">Read Story →</a>
       </div>
-    </div>
+    </article>
+  </section>
 
-    <div class="post">
-      <div class="placeholder"><span>📷</span><p>Photo Coming Soon</p></div>
-      <div class="post-content">
-        <div class="date">Coming Soon</div>
-        <h3>Deer Camp Journal</h3>
-        <p>Follow along with scouting, stand placement, trail cameras, and the excitement of deer season.</p>
-        <a href="#" class="button">Coming Soon</a>
-      </div>
-    </div>
+  <section class="newsletter-card">
+    <h2>More Stories Coming Soon</h2>
+    <p>Check back for new hunting stories, fishing reports, wild game recipes, and outdoor lessons from the field.</p>
+    <a class="button" href="contact.html">Contact Jason</a>
   </section>
 </main>
 
