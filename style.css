@@ -654,3 +654,17 @@ footer{
   .large-card{grid-column:span 1;}
   .large-card img,.mag-card img{height:250px;}
 }
+/* ===========================
+   Recipe Page Images
+   =========================== */
+
+.recipe-photo{
+    width:45%;
+    max-width:450px;
+    height:auto;
+    display:block;
+    margin:25px auto;
+    border:4px solid #C8A646;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.45);
+}
