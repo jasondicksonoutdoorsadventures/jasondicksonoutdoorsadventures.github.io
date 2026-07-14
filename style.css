@@ -668,3 +668,58 @@ footer{
     border-radius:15px;
     box-shadow:0 8px 20px rgba(0,0,0,.45);
 }
+
+/* ---------- Deer Hunting Guide ---------- */
+.deer-guide{max-width:980px;overflow:hidden}
+.article-kicker{text-align:center;color:#e8c75f;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.featured-figure{margin:30px -40px 38px;background:#0b2418;border-top:4px solid #c8a646;border-bottom:4px solid #c8a646}
+.featured-figure img{display:block;width:100%;max-height:620px;object-fit:cover;object-position:center 28%}
+.featured-figure figcaption{padding:12px 20px;text-align:center;color:#e8dec2;font-style:italic}
+.lead{font-size:22px!important;color:#fffaf0;border-left:5px solid #d4af37;padding-left:20px}
+.quick-box,.safety-note{background:linear-gradient(135deg,#183f2b,#0e2b1d);border:1px solid #4f7a55;border-left:6px solid #d4af37;border-radius:14px;padding:22px 24px;margin:32px 0}
+.quick-box h2,.safety-note h2{margin-top:0;text-align:left;color:#e8c75f}
+.quick-box p,.safety-note p{margin-bottom:0!important}
+.article-toc{background:#0c2a1b;border:1px solid #315b3e;border-radius:16px;padding:24px 30px;margin:35px 0}
+.article-toc h2{text-align:left;margin-top:0}
+.article-toc ol{columns:2;column-gap:40px;margin-bottom:0;padding-left:24px}
+.article-toc li{margin:10px 0;break-inside:avoid}
+.article-toc a{color:#f5f2e8;text-decoration:none}
+.article-toc a:hover{color:#d4af37;text-decoration:underline}
+.mistake-section{position:relative;padding:28px 0 22px 72px;border-bottom:1px solid rgba(200,166,70,.28)}
+.mistake-section h2{text-align:left;margin:0 0 14px;font-size:30px}
+.mistake-number{position:absolute;left:0;top:25px;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#e0bd50,#a97606);color:#081b12;font-weight:900;font-size:24px;box-shadow:0 5px 14px rgba(0,0,0,.35)}
+.field-tip{background:#0b2518;border-left:4px solid #c8a646;border-radius:8px;padding:16px 18px;margin:18px 0 6px;line-height:1.7;color:#f5f2e8}
+.article-finale{margin-top:38px;padding-top:10px}
+.article-actions{text-align:center;margin-top:35px}
+@media(max-width:700px){
+  .featured-figure{margin:25px -25px 30px}
+  .featured-figure img{max-height:420px}
+  .article-toc ol{columns:1}
+  .mistake-section{padding-left:0;padding-top:78px}
+  .mistake-number{top:18px}
+  .mistake-section h2{font-size:25px}
+  .lead{font-size:19px!important}
+}
+
+/* Smaller featured image for the beginner deer hunting article */
+.featured-buck-figure{
+  width:min(650px, 100%);
+  margin:30px auto 38px;
+  border:4px solid #c8a646;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 28px rgba(0,0,0,.38);
+}
+.featured-buck-figure img{
+  width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+}
+@media (max-width:700px){
+  .featured-buck-figure{
+    width:100%;
+    margin:24px auto 30px;
+    border-width:3px;
+  }
+}
