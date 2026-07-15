@@ -3,6 +3,10 @@
    Main Website Stylesheet
    ========================================================= */
 
+/* =========================================================
+   1. Global Reset and Base Styles
+   ========================================================= */
+
 * {
   box-sizing: border-box;
 }
@@ -13,6 +17,10 @@ body {
   background: #081b12;
   color: #f5f2e8;
 }
+
+/* =========================================================
+   2. Header, Logo, and Navigation
+   ========================================================= */
 
 header {
   background: linear-gradient(to bottom, #18472e, #102b1d);
@@ -50,6 +58,10 @@ nav a:hover,
 nav a.active {
   color: #d4af37;
 }
+
+/* =========================================================
+   3. Hero Sections
+   ========================================================= */
 
 .hero {
   min-height: 85vh;
@@ -96,6 +108,10 @@ nav a.active {
   color: #f5f2e8;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
+
+/* =========================================================
+   4. General Page Layout and Shared Components
+   ========================================================= */
 
 main {
   width: 90%;
@@ -177,13 +193,19 @@ main h2 {
 .grid {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
+
 .book-grid,
 .posts {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
+
 .gallery-grid {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
+/* =========================================================
+   5. Books
+   ========================================================= */
 
 .featured-book {
   display: flex;
@@ -261,6 +283,10 @@ main h2 {
   font-size: 20px;
   margin: 12px 0;
 }
+
+/* =========================================================
+   6. Blog and Story Cards
+   ========================================================= */
 
 .post,
 .story-card {
@@ -351,7 +377,9 @@ main h2 {
   font-size: 20px;
 }
 
-/* ---------- Blog Article ---------- */
+/* =========================================================
+   7. Standard Article Pages
+   ========================================================= */
 .article {
   background: #123524;
   max-width: 900px;
@@ -361,6 +389,7 @@ main h2 {
   border: 1px solid #2e5d3b;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
 }
+
 .article-author {
     text-align: center;
     margin-top: 0;
@@ -376,6 +405,7 @@ main h2 {
     color: #d8d8d8;
     font-size: 0.95rem;
 }
+
 .article h1 {
     color: #d4af37;
     text-align: center;
@@ -440,6 +470,10 @@ main h2 {
   margin-top: 40px;
 }
 
+/* =========================================================
+   8. Gallery
+   ========================================================= */
+
 .gallery-intro {
   text-align: center;
   max-width: 850px;
@@ -483,6 +517,10 @@ main h2 {
   transform: scale(1.03);
 }
 
+/* =========================================================
+   9. Contact Page
+   ========================================================= */
+
 .contact-section {
   width: 90%;
   max-width: 1000px;
@@ -512,6 +550,10 @@ main h2 {
   margin: 10px;
 }
 
+/* =========================================================
+   10. Footer
+   ========================================================= */
+
 footer {
   background: #123524;
   text-align: center;
@@ -519,6 +561,10 @@ footer {
   margin-top: 50px;
   border-top: 4px solid #c8a646;
 }
+
+/* =========================================================
+   11. Base Mobile Styles
+   ========================================================= */
 
 @media (max-width: 700px) {
   .logo {
@@ -563,7 +609,9 @@ footer {
   }
 }
 
-/* ---------- Outdoor Magazine Blog Layout ---------- */
+/* =========================================================
+   12. Outdoor Magazine Blog Layout
+   ========================================================= */
 .blog-hero {
   background:
     linear-gradient(rgba(8, 27, 18, 0.55), rgba(8, 27, 18, 0.75)),
@@ -746,9 +794,10 @@ footer {
     height: 250px;
   }
 }
-/* ===========================
-   Recipe Page Images
-   =========================== */
+
+/* =========================================================
+   13. Recipe Pages
+   ========================================================= */
 
 .recipe-photo {
   width: 45%;
@@ -761,11 +810,14 @@ footer {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
 }
 
-/* ---------- Deer Hunting Guide ---------- */
+/* =========================================================
+   14. Deer Hunting Guide
+   ========================================================= */
 .deer-guide {
   max-width: 980px;
   overflow: hidden;
 }
+
 .article-kicker {
   text-align: center;
   color: #e8c75f;
@@ -774,12 +826,14 @@ footer {
   text-transform: uppercase;
   margin-bottom: 12px;
 }
+
 .featured-figure {
   margin: 30px -40px 38px;
   background: #0b2418;
   border-top: 4px solid #c8a646;
   border-bottom: 4px solid #c8a646;
 }
+
 .featured-figure img {
   display: block;
   width: 100%;
@@ -787,18 +841,21 @@ footer {
   object-fit: cover;
   object-position: center 28%;
 }
+
 .featured-figure figcaption {
   padding: 12px 20px;
   text-align: center;
   color: #e8dec2;
   font-style: italic;
 }
+
 .lead {
   font-size: 22px !important;
   color: #fffaf0;
   border-left: 5px solid #d4af37;
   padding-left: 20px;
 }
+
 .quick-box,
 .safety-note {
   background: linear-gradient(135deg, #183f2b, #0e2b1d);
@@ -808,16 +865,19 @@ footer {
   padding: 22px 24px;
   margin: 32px 0;
 }
+
 .quick-box h2,
 .safety-note h2 {
   margin-top: 0;
   text-align: left;
   color: #e8c75f;
 }
+
 .quick-box p,
 .safety-note p {
   margin-bottom: 0 !important;
 }
+
 .article-toc {
   background: #0c2a1b;
   border: 1px solid #315b3e;
@@ -825,38 +885,46 @@ footer {
   padding: 24px 30px;
   margin: 35px 0;
 }
+
 .article-toc h2 {
   text-align: left;
   margin-top: 0;
 }
+
 .article-toc ol {
   columns: 2;
   column-gap: 40px;
   margin-bottom: 0;
   padding-left: 24px;
 }
+
 .article-toc li {
   margin: 10px 0;
   break-inside: avoid;
 }
+
 .article-toc a {
   color: #f5f2e8;
   text-decoration: none;
 }
+
 .article-toc a:hover {
   color: #d4af37;
   text-decoration: underline;
 }
+
 .mistake-section {
   position: relative;
   padding: 28px 0 22px 72px;
   border-bottom: 1px solid rgba(200, 166, 70, 0.28);
 }
+
 .mistake-section h2 {
   text-align: left;
   margin: 0 0 14px;
   font-size: 30px;
 }
+
 .mistake-number {
   position: absolute;
   left: 0;
@@ -872,38 +940,42 @@ footer {
   font-size: 24px;
   box-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
 }
+
 .field-tip {
-    background: linear-gradient(135deg, #20452c, #143220);
-    border-left: 6px solid #d4af37;
-    border-radius: 16px;
-    padding: 24px 28px;
-    margin: 32px 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+  background: linear-gradient(135deg, #20452c, #143220);
+  border-left: 6px solid #d4af37;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin: 32px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 .field-tip strong {
-    display: block;
-    color: #d4af37;
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    letter-spacing: .5px;
+  display: block;
+  color: #d4af37;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
 }
 
 .field-tip p {
-    margin: 0;
-    color: #f5f5f5;
-    font-size: 1.05rem;
-    line-height: 1.8;
+  margin: 0;
+  color: #f5f5f5;
+  font-size: 1.05rem;
+  line-height: 1.8;
 }
+
 .article-finale {
   margin-top: 38px;
   padding-top: 10px;
 }
+
 .article-actions {
   text-align: center;
   margin-top: 35px;
 }
+
 @media (max-width: 700px) {
   .featured-figure {
     margin: 25px -25px 30px;
@@ -929,7 +1001,9 @@ footer {
   }
 }
 
-/* Smaller featured image for the beginner deer hunting article */
+/* =========================================================
+   15. Beginner Deer Hunting Featured Image
+   ========================================================= */
 .featured-buck-figure {
   width: min(650px, 100%);
   margin: 30px auto 38px;
@@ -938,12 +1012,14 @@ footer {
   overflow: hidden;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.38);
 }
+
 .featured-buck-figure img {
   width: 100%;
   height: auto;
   max-height: none;
   object-fit: contain;
 }
+
 @media (max-width: 700px) {
   .featured-buck-figure {
     width: 100%;
