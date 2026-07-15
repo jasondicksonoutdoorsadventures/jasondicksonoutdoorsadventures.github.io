@@ -72,7 +72,7 @@ nav a.active {
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   padding: 40px;
@@ -622,7 +622,7 @@ footer {
 
 .featured-story {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1fr 1fr;
   gap: 0;
   background: #123524;
   border: 1px solid #2e5d3b;
@@ -1038,21 +1038,25 @@ footer {
 }
 
 .read-next-btn {
-    display: inline-flex;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
+
     width: 420px;
     max-width: 90%;
+    box-sizing: border-box;
+
     background: linear-gradient(180deg, #d4af37, #b8860b);
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.05rem;
-    padding: 14px 20px;
+    padding: 14px 28px;
     border: 2px solid #e8c75f;
     border-radius: 50px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
-    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,.35);
+    transition: all .3s ease;
 }
 
 .read-next-btn:hover {
@@ -1086,4 +1090,29 @@ footer {
     background: #d4af37;
     color: #123524;
     transform: translateY(-2px);
+}/* Continue the Adventure - Homepage */
+
+.continue-adventure {
+    text-align: center;
+    margin: 60px auto;
+}
+
+.continue-adventure .read-next-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+.continue-adventure .read-next-btn {
+    width: 420px;
+    max-width: 90%;
+}
+.btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    min-width: 34px;
+    font-size: 1.2rem;
 }
