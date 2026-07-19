@@ -1,0 +1,23 @@
+JASON DICKSON WEBSITE STRUCTURE
+
+Main pages:
+  index.html
+  books.html
+  recipes.html
+  blog.html
+  gallery.html
+  contact.html
+
+Recipe pages:
+  recipes/baked-parmesan-catfish.html
+  recipes/smoked-goose.html
+  recipes/striped-bass-tomato-basil.html
+
+Images:
+  images/
+
+Styles:
+  style.css
+
+Compatibility redirect files remain in the root for old recipe URLs.
+Upload all files and folders in this package to the root of the GitHub Pages repository.
