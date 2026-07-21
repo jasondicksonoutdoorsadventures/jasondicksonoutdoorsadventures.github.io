@@ -12,375 +12,122 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Wild Game & Fresh Catch Recipes | Jason Dickson's Outdoor Adventures</title>
-  <meta name="description" content="Browse wild game, waterfowl, fish, camp cooking, and outdoor recipes from Jason Dickson.">
-
+  <title>Recipes | Jason Dickson's Outdoor Adventures</title>
+  <meta name="description" content="Wild game, fresh catch, waterfowl, and outdoor cooking recipes from Jason Dickson's Outdoor Adventures.">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .recipes-hero{
-      min-height:440px;
-      background:
-        linear-gradient(rgba(8,27,18,.50),rgba(8,27,18,.78)),
-        url("images/banner2.JPG");
-      background-size:cover;
-      background-position:center;
-    }
-
-    .recipes-hero .hero-content{margin-top:0}
-
-    .recipes-intro{
-      max-width:900px;
-      margin:0 auto 45px;
-      text-align:center;
-      font-size:20px;
-      line-height:1.75;
-      color:#F5F2E8;
-    }
-
-    .recipe-categories{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:12px;
-      margin:0 auto 50px;
-    }
-
-    .recipe-categories a{
-      color:#F5F2E8;
-      background:#1A452F;
-      border:1px solid #C8A646;
-      border-radius:999px;
-      padding:11px 19px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:.25s;
-      box-shadow:0 6px 15px rgba(0,0,0,.25);
-    }
-
-    .recipe-categories a:hover{
-      background:#D4AF37;
-      color:#081B12;
-      transform:translateY(-2px);
-    }
-
-    .recipe-section{
-      scroll-margin-top:25px;
-      margin:60px 0;
-    }
-
-    .recipe-section-title{
-      text-align:left;
-      border-bottom:2px solid #C8A646;
-      padding-bottom:12px;
-      margin-bottom:28px;
-    }
-
-    .featured-recipe{
-      display:grid;
-      grid-template-columns:1.15fr .85fr;
-      background:#123524;
-      border:1px solid #2E5D3B;
-      border-radius:22px;
-      overflow:hidden;
-      box-shadow:0 16px 35px rgba(0,0,0,.45);
-    }
-
-    .featured-recipe img{
-      width:100%;
-      height:100%;
-      min-height:400px;
-      object-fit:cover;
-      border-right:5px solid #C8A646;
-    }
-
-    .featured-recipe-content{
-      padding:42px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:flex-start;
-    }
-
-    .featured-recipe-content h2{
-      text-align:left;
-      font-size:38px;
-      margin:12px 0 16px;
-    }
-
-    .featured-recipe-content p{
-      font-size:19px;
-      line-height:1.7;
-    }
-
-    .featured-recipe-content .button{margin-left:0}
-
-    .recipe-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-      gap:26px;
-    }
-
-    .recipe-card{
-      background:#123524;
-      border:1px solid #2E5D3B;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 10px 25px rgba(0,0,0,.35);
-      transition:.3s;
-      display:flex;
-      flex-direction:column;
-    }
-
-    .recipe-card:hover{
-      transform:translateY(-7px);
-      box-shadow:0 18px 35px rgba(0,0,0,.55);
-    }
-
-    .recipe-card-image{
-      width:100%;
-      height:235px;
-      object-fit:cover;
-      display:block;
-      border-bottom:4px solid #C8A646;
-    }
-
-    .recipe-card-placeholder{
-      min-height:235px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:82px;
-      background:
-        radial-gradient(circle at center,rgba(212,175,55,.20),transparent 55%),
-        linear-gradient(135deg,#18472e,#0c2619);
-      border-bottom:4px solid #C8A646;
-    }
-
-    .recipe-card-content{
-      padding:26px;
-      display:flex;
-      flex-direction:column;
-      flex:1;
-    }
-
-    .recipe-card h3{
-      color:#D4AF37;
-      font-size:25px;
-      margin:0 0 12px;
-    }
-
-    .recipe-card p{
-      line-height:1.65;
-      margin-top:0;
-    }
-
-    .recipe-card .button{
-      align-self:flex-start;
-      margin:12px 0 0;
-      margin-top:auto;
-    }
-
-    .coming-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-      gap:18px;
-    }
-
-    .coming-card{
-      background:linear-gradient(135deg,#123524,#1A452F);
-      border:1px solid #2E5D3B;
-      border-radius:15px;
-      padding:24px 18px;
-      text-align:center;
-      font-weight:bold;
-      box-shadow:0 8px 20px rgba(0,0,0,.25);
-    }
-
-    .coming-card span{
-      display:block;
-      font-size:38px;
-      margin-bottom:10px;
-    }
-
-    .cookbook-callout{
-      text-align:center;
-      background:linear-gradient(135deg,#123524,#1A452F);
-      border:1px solid #C8A646;
-      border-radius:20px;
-      padding:38px 28px;
-      box-shadow:0 12px 28px rgba(0,0,0,.35);
-      margin-top:55px;
-    }
-
-    .cookbook-callout p{
-      max-width:760px;
-      margin:0 auto 18px;
-      line-height:1.7;
-      font-size:18px;
-    }
-
-    @media(max-width:900px){
-      .featured-recipe{grid-template-columns:1fr}
-      .featured-recipe img{
-        min-height:280px;
-        border-right:none;
-        border-bottom:5px solid #C8A646;
-      }
-      .featured-recipe-content{padding:30px}
-      .featured-recipe-content h2{font-size:31px}
-    }
-
-    @media(max-width:700px){
-      .recipes-hero{min-height:360px}
-      .recipes-hero h2{font-size:2.35rem}
-      .recipe-section{margin:45px 0}
-    }
-  </style>
 </head>
 
 <body>
-  <header>
-    <a href="index.html">
-      <img src="images/logo.png" alt="Jason Dickson's Outdoor Adventures" class="logo">
-    </a>
+<header>
+  <a href="index.html">
+    <img src="images/logo.png" alt="Jason Dickson's Outdoor Adventures" class="logo">
+  </a>
 
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="books.html">Books</a>
-      <a class="active" href="recipes.html">Recipes</a>
-      <a href="blog.html">Blog</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a class="active" href="recipes.html">Recipes</a>
+    <a href="blog.html">Blog</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero recipes-hero">
-    <div class="hero-content">
-      <h2>Wild Game & Fresh Catch Recipes</h2>
-      <p>From the field and the water to the family dinner table.</p>
-    </div>
+<section class="hero small">
+  <div class="hero-content">
+    <h2>Wild Game &amp; Fresh Catch Recipes</h2>
+    <p>From the field and the water to the dinner table, these are some of my favorite outdoor recipes.</p>
+  </div>
+</section>
+
+<main>
+  <section>
+    <h1 class="page-title">Welcome</h1>
+    <p class="intro">
+      Whether you're cooking freshly caught fish or preparing wild game after a successful hunt,
+      I hope these recipes help you enjoy the outdoors long after the hunt is over.
+    </p>
   </section>
 
-  <main>
-    <p class="recipes-intro">
-      Whether you are preparing freshly caught fish, cooking waterfowl after a successful hunt,
-      or planning a camp meal, these recipes celebrate the full outdoor experience—from harvest
-      to table.
-    </p>
+  <section aria-labelledby="featured-recipe">
+    <h2 id="featured-recipe" class="section-title">Featured Recipe</h2>
 
-    <nav class="recipe-categories" aria-label="Recipe categories">
-      <a href="#featured">⭐ Featured</a>
-      <a href="#fish">🐟 Fish</a>
-      <a href="#waterfowl">🦆 Waterfowl</a>
-      <a href="#wild-game">🦌 Wild Game</a>
-      <a href="#camp-cooking">🔥 Camp Cooking</a>
-    </nav>
+    <article class="featured-story">
+      <a href="recipes/smoked-tuna-dip.html">
+        <img src="images/smoked%20tuna%20dip.jpg" alt="Smoked Tuna Dip">
+      </a>
 
-    <section class="recipe-section" id="featured">
-      <h2 class="recipe-section-title">⭐ Featured Recipe</h2>
+      <div class="featured-story-content">
+        <span class="tag">New Recipe</span>
+        <h2>Smoked Tuna Dip</h2>
+        <p>
+          A creamy fresh-catch dip made with smoked tuna, jalapeños, dill pickles,
+          shredded cheese, and an optional 12-hour brine for even more flavor.
+        </p>
+        <a class="button" href="recipes/smoked-tuna-dip.html">View Recipe</a>
+      </div>
+    </article>
+  </section>
 
-      <article class="featured-recipe">
-        <img
-          src="images/baked-parmesan-catfish.jpg"
-          alt="Golden baked Parmesan catfish fillets served with lemon">
+  <section aria-labelledby="outdoor-favorites">
+    <h2 id="outdoor-favorites" class="section-title">More Outdoor Favorites</h2>
 
-        <div class="featured-recipe-content">
-          <div class="tag">🐟 Fresh Catch Favorite</div>
+    <div class="magazine-grid">
+      <article class="mag-card">
+        <img src="images/baked-parmesan-catfish.jpg" alt="Baked Parmesan Catfish">
+        <div class="mag-card-content">
+          <span class="tag">Fish Recipe</span>
           <h2>Baked Parmesan Catfish</h2>
           <p>
-            Crispy on the outside and tender and flaky inside, this baked Parmesan
-            catfish is a lighter alternative to frying and an easy family meal.
+            A crispy Parmesan crust with tender, flaky catfish makes this one of my
+            favorite easy fish dinners.
           </p>
           <a class="button" href="recipes/baked-parmesan-catfish.html">View Recipe</a>
         </div>
       </article>
-    </section>
 
-    <section class="recipe-section" id="fish">
-      <h2 class="recipe-section-title">🐟 Fish Recipes</h2>
+      <article class="mag-card">
+        <img src="images/smoked-goose.png" alt="Smoked Goose">
+        <div class="mag-card-content">
+          <span class="tag">Waterfowl</span>
+          <h2>Smoked Goose</h2>
+          <p>
+            Turn wild goose into a tender, smoky meal with a flavorful dry brine
+            and low-and-slow cooking.
+          </p>
+          <a class="button" href="recipes/smoked-goose.html">View Recipe</a>
+        </div>
+      </article>
 
-      <div class="recipe-grid">
-        <article class="recipe-card">
-          <img class="recipe-card-image" src="images/baked-parmesan-catfish.jpg" alt="Baked Parmesan Catfish">
-          <div class="recipe-card-content">
-            <h3>Baked Parmesan Catfish</h3>
-            <p>A golden Parmesan crust with tender, flaky catfish and simple seasonings.</p>
-            <a class="button" href="recipes/baked-parmesan-catfish.html">View Recipe</a>
-          </div>
-        </article>
+      <article class="mag-card">
+        <img src="images/blog/striped-bass-tomato-basil.jpg" alt="Striped Bass with Tomato Basil Sauce">
+        <div class="mag-card-content">
+          <span class="tag">Fresh Catch</span>
+          <h2>Striped Bass with Tomato Basil Sauce</h2>
+          <p>
+            A light, fresh fish recipe featuring striped bass, ripe tomatoes,
+            basil, and a simple savory sauce.
+          </p>
+          <a class="button" href="recipes/striped-bass-tomato-basil.html">View Recipe</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-        <article class="recipe-card">
-          <img class="recipe-card-image" src="images/blog/striped-bass-tomato-basil.jpg" alt="Striped Bass with Tomato Basil Sauce">
-          <div class="recipe-card-content">
-            <h3>Striped Bass with Tomato Basil Sauce</h3>
-            <p>A light, fresh striped bass recipe finished with tomato, basil, and bright flavor.</p>
-            <a class="button" href="recipes/striped-bass-tomato-basil.html">View Recipe</a>
-          </div>
-        </article>
-      </div>
-    </section>
+  <section class="newsletter-card" aria-labelledby="coming-soon">
+    <h2 id="coming-soon">Coming Soon</h2>
+    <p>
+      Venison Chili • Duck Jalapeño Poppers • Blackened Catfish • Venison Backstrap •
+      Grilled Teal • Campfire Dutch Oven Cobbler
+    </p>
+    <p>Check back every Wednesday for a new outdoor recipe.</p>
+  </section>
+</main>
 
-    <section class="recipe-section" id="waterfowl">
-      <h2 class="recipe-section-title">🦆 Waterfowl Recipes</h2>
-
-      <div class="recipe-grid">
-        <article class="recipe-card">
-          <img class="recipe-card-image" src="images/smoked-goose.png" alt="Smoked Goose">
-          <div class="recipe-card-content">
-            <h3>Smoked Goose</h3>
-            <p>Low-and-slow smoked goose with a flavorful dry rub, tender meat, and crisp skin.</p>
-            <a class="button" href="recipes/smoked-goose.html">View Recipe</a>
-          </div>
-        </article>
-
-        <article class="recipe-card">
-          <div class="recipe-card-placeholder" aria-hidden="true">🦆</div>
-          <div class="recipe-card-content">
-            <h3>Duck Jalapeño Poppers</h3>
-            <p>A bold combination of duck, peppers, cheese, and bacon.</p>
-            <span class="tag">Coming Soon</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="recipe-section" id="wild-game">
-      <h2 class="recipe-section-title">🦌 Wild Game Recipes</h2>
-
-      <div class="coming-grid">
-        <div class="coming-card"><span>🥣</span>Venison Chili<br><small>Coming Soon</small></div>
-        <div class="coming-card"><span>🥩</span>Venison Backstrap<br><small>Coming Soon</small></div>
-        <div class="coming-card"><span>🐗</span>Wild Hog Favorites<br><small>Coming Soon</small></div>
-        <div class="coming-card"><span>🦃</span>Turkey Recipes<br><small>Coming Soon</small></div>
-      </div>
-    </section>
-
-    <section class="recipe-section" id="camp-cooking">
-      <h2 class="recipe-section-title">🔥 Camp Cooking</h2>
-
-      <div class="coming-grid">
-        <div class="coming-card"><span>🔥</span>Campfire Dutch Oven Cobbler<br><small>Coming Soon</small></div>
-        <div class="coming-card"><span>🍳</span>Cast-Iron Breakfast<br><small>Coming Soon</small></div>
-        <div class="coming-card"><span>🥘</span>One-Pot Camp Meals<br><small>Coming Soon</small></div>
-      </div>
-    </section>
-
-    <section class="cookbook-callout">
-      <h2>More Recipes Are on the Way</h2>
-      <p>
-        This collection will continue to grow with fish, waterfowl, venison,
-        wild hog, and camp-cooking recipes from Jason's outdoor kitchen.
-      </p>
-      <a class="button" href="books.html">Explore Jason's Books</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>Jason Dickson's Outdoor Adventures</p>
-    <p>Author • Hunter • Outdoorsman</p>
-    <p>© 2026 Jason Dickson. All Rights Reserved.</p>
-  </footer>
+<footer>
+  <p>Jason Dickson's Outdoor Adventures</p>
+  <p>Author • Hunter • Outdoorsman</p>
+  <p>© 2026 Jason Dickson. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
