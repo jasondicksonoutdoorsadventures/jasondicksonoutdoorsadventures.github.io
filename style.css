@@ -1127,3 +1127,8 @@ footer {
     max-width: 90%;
     margin-top: 20px;
 }
+
+/* Search and error pages */
+.search-panel{max-width:850px;margin:0 auto 2rem;padding:1.5rem;background:#fff;border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,.1)}
+.search-panel label{display:block;font-weight:700;margin-bottom:.65rem}.search-controls{display:flex;gap:.75rem;flex-wrap:wrap}.search-controls input{flex:1;min-width:220px;padding:.85rem 1rem;border:1px solid #777;border-radius:6px;font:inherit}.search-controls .button{border:0;cursor:pointer}.search-results{display:grid;gap:1rem;max-width:900px;margin:0 auto}.search-result{background:#fff;padding:1.25rem;border-radius:10px;box-shadow:0 3px 14px rgba(0,0,0,.09)}.search-result h2{margin:.45rem 0}.search-result h2 a{color:inherit}.not-found{text-align:center;min-height:55vh;padding-top:4rem}.error-code{font-size:5rem;font-weight:800;margin:0;line-height:1}
+@media(max-width:600px){.search-controls{display:block}.search-controls input,.search-controls .button{width:100%;margin-bottom:.75rem}}
