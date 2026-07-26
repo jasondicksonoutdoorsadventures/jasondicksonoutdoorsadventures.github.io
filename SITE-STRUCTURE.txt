@@ -12,6 +12,7 @@ Recipe pages:
   recipes/baked-parmesan-catfish.html
   recipes/smoked-goose.html
   recipes/striped-bass-tomato-basil.html
+  recipes/venison-roast.html
 
 Images:
   images/

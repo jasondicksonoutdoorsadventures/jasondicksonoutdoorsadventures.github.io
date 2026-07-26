@@ -1,7 +1,8 @@
-Rebuilt Jason Dickson website.
+Jason Dickson Outdoors Adventures website
 
-Open index.html to start.
-Blog list is blog.html.
-The Frosted Hunt story is frosted-hunt.html.
-All shared styling is in style.css.
-Hunting photos are included in images/blog/.
+Organization:
+- Main pages and stories remain in the project root.
+- Recipe pages are stored in the recipes folder.
+- Recipe photos are stored in images.
+- Older root recipe URLs are lightweight redirects so existing links do not break.
+- Keep the .git folder so GitHub Desktop continues to recognize the repository.
