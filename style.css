@@ -698,18 +698,20 @@ footer {
 
 .magazine-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .mag-card {
+  min-width: 0;
+  height: 100%;
   background: #123524;
   border: 1px solid #2e5d3b;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-  transition: 0.35s;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   display: flex;
   flex-direction: column;
 }
@@ -720,9 +722,11 @@ footer {
 }
 
 .mag-card img {
+  display: block;
   width: 100%;
   height: 230px;
   object-fit: cover;
+  object-position: center;
   border-bottom: 4px solid #c8a646;
 }
 
@@ -776,23 +780,116 @@ footer {
   .featured-story {
     grid-template-columns: 1fr;
   }
+
   .featured-story img {
     border-right: none;
     border-bottom: 5px solid #c8a646;
     min-height: 280px;
+    max-height: 420px;
   }
+
   .featured-story-content h2 {
     font-size: 32px;
   }
+
   .magazine-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .large-card {
     grid-column: span 1;
   }
+
   .large-card img,
   .mag-card img {
-    height: 250px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 650px) {
+  header {
+    padding: 12px 14px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 14px;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  main {
+    width: 100%;
+    padding: 30px 16px;
+  }
+
+  .hero.small {
+    min-height: 230px;
+    padding: 28px 16px;
+  }
+
+  .hero.small h2 {
+    font-size: clamp(2rem, 10vw, 2.7rem);
+    line-height: 1.08;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  .page-title {
+    font-size: 38px;
+  }
+
+  .intro {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .featured-story-content {
+    padding: 26px 22px;
+  }
+
+  .featured-story-content h2 {
+    font-size: 29px;
+  }
+
+  .featured-story-content p {
+    font-size: 18px;
+  }
+
+  .magazine-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .mag-card img,
+  .large-card img {
+    height: 230px;
+  }
+
+  .mag-card-content {
+    padding: 22px;
+  }
+
+  .mag-card-content h2 {
+    font-size: 26px;
+  }
+
+  .mag-card-content .button {
+    width: 100%;
+    margin: 14px 0 0;
+    text-align: center;
+  }
+
+  .newsletter-card {
+    padding: 26px 18px;
   }
 }
 
@@ -1133,3 +1230,14 @@ footer {
 .search-panel{max-width:850px;margin:0 auto 2rem;padding:1.5rem;background:#fff;border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,.1)}
 .search-panel label{display:block;font-weight:700;margin-bottom:.65rem}.search-controls{display:flex;gap:.75rem;flex-wrap:wrap}.search-controls input{flex:1;min-width:220px;padding:.85rem 1rem;border:1px solid #777;border-radius:6px;font:inherit}.search-controls .button{border:0;cursor:pointer}.search-results{display:grid;gap:1rem;max-width:900px;margin:0 auto}.search-result{background:#fff;padding:1.25rem;border-radius:10px;box-shadow:0 3px 14px rgba(0,0,0,.09)}.search-result h2{margin:.45rem 0}.search-result h2 a{color:inherit}.not-found{text-align:center;min-height:55vh;padding-top:4rem}.error-code{font-size:5rem;font-weight:800;margin:0;line-height:1}
 @media(max-width:600px){.search-controls{display:block}.search-controls input,.search-controls .button{width:100%;margin-bottom:.75rem}}
+
+/* Recipe-card stability */
+.mag-card-content {
+  min-width: 0;
+}
+
+.mag-card-content h2,
+.mag-card-content p {
+  overflow-wrap: anywhere;
+}
+
