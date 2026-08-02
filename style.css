@@ -1241,3 +1241,28 @@ footer {
   overflow-wrap: anywhere;
 }
 
+
+
+/* Mobile navigation */
+.menu-toggle{
+display:none;
+background:#d4af37;
+color:#081b12;
+border:none;
+padding:10px 16px;
+font-weight:700;
+border-radius:8px;
+margin:10px auto;
+cursor:pointer;
+}
+@media (max-width:768px){
+header nav{
+display:none;
+flex-direction:column;
+gap:12px;
+text-align:center;
+padding:15px 0;
+}
+header nav.show{display:flex;}
+.menu-toggle{display:block;}
+}

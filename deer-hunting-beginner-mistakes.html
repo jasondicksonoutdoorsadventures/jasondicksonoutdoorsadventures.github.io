@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <!DOCTYPE html>
 
 <!DOCTYPE html>
@@ -88,7 +89,7 @@
 <a href="index.html">
 <img alt="Jason Dickson's Outdoor Adventures" class="logo" decoding="async" src="images/logo.png"/>
 </a>
-<nav aria-label="Main navigation"><a href="index.html">Home</a><a href="books.html">Books</a><a href="recipes.html">Recipes</a><a href="blog.html">Blog</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+<button class="menu-toggle" type="button">☰ Menu</button><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="books.html">Books</a><a href="recipes.html">Recipes</a><a href="blog.html">Blog</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
 </header>
 <main>
 <article class="article deer-guide">
@@ -379,4 +380,4 @@ How to avoid learning every lesson the hard way.
 <a class="nav-btn" href="index.html">
         🏠 Home
     </a>
-</div></article></main></body></html>
+</div></article></main><script id="mobile-menu-script">document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('.menu-toggle');const n=document.querySelector('header nav');if(b&&n){b.onclick=()=>n.classList.toggle('show');}});</script></body></html>
