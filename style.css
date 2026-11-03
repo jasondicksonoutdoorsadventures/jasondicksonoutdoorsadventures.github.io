@@ -1332,3 +1332,16 @@ header nav.show{display:flex;}
     background: #1a452f;
   }
 }
+
+/* Keep the navigation menu visible on desktop */
+@media (min-width: 769px) {
+  header .desktop-nav {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  header .mobile-menu {
+    display: none !important;
+  }
+}
