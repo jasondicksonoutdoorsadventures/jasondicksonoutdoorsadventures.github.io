@@ -1268,7 +1268,7 @@ header nav.show{display:flex;}
 
 /* Mobile navigation — CSS-only, no JavaScript required */
 .mobile-menu {
-  display: contents;
+  display: block;
 }
 
 .mobile-menu summary {
